@@ -1,0 +1,1 @@
+export const givCartoonInfoProjects = (state) => state.cartoonInfoProject;

@@ -1,0 +1,1 @@
+export const ADD_INFO_PROJECT = 'ADD_INFO_PROJECT';

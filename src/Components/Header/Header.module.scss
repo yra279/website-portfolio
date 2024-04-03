@@ -1,0 +1,160 @@
+.header {
+    background-color: #171718;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #26292d;
+    letter-spacing: normal;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+.logo {
+    font-size: 150%;
+}
+
+.buttonTheme {
+    --blackpure: #000;
+    --black: #171718;
+    --black-border: #26292d;
+    --white: #fff;
+    --purple: #5c62ec;
+    --nav-bg: var(--black);
+    --nav-border: var(--black-border);
+    --nav-text: var(--white);
+    --header-bg: var(--black);
+    --header-text: var(--white);
+    --footer-bg: var(--black);
+    --footer-text: var(--white);
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --accent: var(--purple);
+    --title-1: var(--accent);
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    order: 9;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 51px;
+    height: 26px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #272727;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.5px;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: #fff;
+    }
+}
+
+
+.darkMode {
+    position: absolute;
+    --blackpure: #000;
+    --black: #171718;
+    --black-border: #26292d;
+    --white: #fff;
+    --purple: #5c62ec;
+    --nav-bg: var(--black);
+    --nav-border: var(--black-border);
+    --nav-text: var(--white);
+    --header-bg: var(--black);
+    --header-text: var(--white);
+    --footer-bg: var(--black);
+    --footer-text: var(--white);
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --accent: var(--purple);
+    --title-1: var(--accent);
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 9;
+    // z-index: 10;
+}
+
+
+.buttonThemeActive {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.5px;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: #fff;
+    }
+}
+
+
+@keyframes activeThemeDark {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes activeThemeLight {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.buttonTheme.buttonThemeActive {
+    &::before {
+        animation: activeThemeDark 0.5s;
+    }
+}
+
+.buttonTheme.buttonThemeNotActive {
+    &::before {
+        animation: activeThemeLight 0.5s;
+    }
+}

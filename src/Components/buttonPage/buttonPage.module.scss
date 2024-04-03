@@ -1,0 +1,20 @@
+.button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    transition: 0.3s;
+}
+
+.button:hover {
+    color: #ffffffab;
+    cursor: pointer;
+}
+
+.decorationText {
+    position: relative;
+    height: 2px;
+    width: 300%;
+    background-color: #5c62ec;
+    
+}

@@ -1,0 +1,1 @@
+export const givInfoProject = (state) => state.infoProject;
